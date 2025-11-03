@@ -169,6 +169,7 @@ def build_birank21_equations(B, dX=4, dY=4):
     fy_x1y1 = sp.expand(fy.subs({x:x1, y:y1}))
     fy_x2y1 = sp.expand(fy.subs({x:x2, y:y1}))
 
+    p1 = sp.expand(lam*f_x1y1 + (1 - lam)*f_x2y1-R)
     p2 = sp.expand(f_x1y1 - R)
     p3 = sp.expand(f_x2y1 - R)
     p4 = sp.expand(lam*fy_x1y1 + (1 - lam)*fy_x2y1)
@@ -176,7 +177,7 @@ def build_birank21_equations(B, dX=4, dY=4):
     p6 = sp.expand(fx_x2y1)
 
     vars5 = (x1, x2, y1, lam, R)
-    return [p2, p3, p4, p5, p6], vars5
+    return [p1,p2, p3, p4, p5, p6], vars5
 
 
 # ------------------ 5) Solve A x ≈ b using GPU LSMR ---------------------------
