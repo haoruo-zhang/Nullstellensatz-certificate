@@ -17,7 +17,7 @@ $$
 
 where \( q_i \) are polynomials with bounded degree.
 
-- If such a certificate exists → the system has **no real solution**.
+- If such a certificate exists → the system has **no solution**.
 - If not → the **certificate degree may need to be increased**.
 
 
