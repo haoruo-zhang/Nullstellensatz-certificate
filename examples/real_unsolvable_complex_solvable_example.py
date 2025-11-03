@@ -10,7 +10,6 @@ def main():
     p_list = [p1, p2]
     vars = (x, y)
 
-    print("\n===== Case 1: No solution system =====")
     for q in range(0, 5):
         print(f"\nq = {q}")
         r = nullstellensatz_certificate_fast(
